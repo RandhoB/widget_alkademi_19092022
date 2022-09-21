@@ -1,3 +1,4 @@
+import 'package:alkademi_widget/latihan_widget2.dart';
 import 'package:flutter/material.dart';
 
 import 'latihan_widget.dart';
@@ -13,7 +14,7 @@ class latihanku extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: home(),
+      home: latihan2(),
     );
   }
 }
