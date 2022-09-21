@@ -39,23 +39,16 @@ class latihan2 extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: Color(0xff38c999),
-                            ),
-                          ),
-                          Image.asset(
-                            'assets/gunungku.jpg',
-                            width: 30,
-                          ),
-                        ],
-                      )
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(30),
+                        clipBehavior: Clip.hardEdge,
+                        child: Image.asset(
+                          'assets/gunungku.jpg',
+                          width: 60,
+                          height: 60,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ],
                   ),
                 ),
