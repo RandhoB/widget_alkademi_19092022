@@ -1,4 +1,6 @@
+import 'package:alkademi_widget/animal_mobile.dart';
 import 'package:alkademi_widget/latihan_widget2.dart';
+import 'package:alkademi_widget/rent_car_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'latihan_widget.dart';
@@ -14,7 +16,7 @@ class latihanku extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: latihan2(),
+      home: latihan4(),
     );
   }
 }

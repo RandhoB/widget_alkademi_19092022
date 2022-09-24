@@ -69,7 +69,7 @@ class home extends StatelessWidget {
               color: Colors.yellow,
             ),
             child: Icon(Icons.abc),
-          )
+          ),
         ],
       ),
     );
