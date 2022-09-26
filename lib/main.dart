@@ -1,4 +1,4 @@
-import 'package:alkademi_widget/animal_mobile(24/09/2022)).dart';
+import 'package:alkademi_widget/animal_mobile(242022).dart';
 import 'package:alkademi_widget/latihan_widget2.dart';
 import 'package:alkademi_widget/rent_car_widget.dart';
 import 'package:flutter/material.dart';
