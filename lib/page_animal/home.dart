@@ -3,6 +3,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,6 +13,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _current = 0;
+
   List<String> imgAssets = [
     'assets/gunungku.jpg',
     "assets/gunungku.jpg",
@@ -71,6 +74,11 @@ class _HomeState extends State<Home> {
                 Container(
                   child: CarouselSlider(
                     options: CarouselOptions(
+                      onPageChanged: (i, r) {
+                        setState(() {
+                          _current = i;
+                        });
+                      },
                       enlargeCenterPage: true,
                       viewportFraction: 1.0,
                       autoPlay: true,
@@ -87,9 +95,17 @@ class _HomeState extends State<Home> {
                         .toList(),
                   ),
                 ),
+                // AnimatedSmoothIndicator(
+                //   activeIndex: _current,
+                //   count: imgAssets.length,
+                //   effect: ExpandingDotsEffect(
+                //       activeDotColor: Color.fromRGBO(0, 0, 0, 0.9),
+                //       dotWidth: 8,
+                //       dotHeight: 8),
+                // ),
                 DotsIndicator(
                   dotsCount: imgAssets.length,
-                  position: 0,
+                  position: _current.toDouble(),
                 ),
               ],
             ),

@@ -3,7 +3,6 @@ import 'package:alkademi_widget/page_animal/home.dart';
 import 'package:alkademi_widget/page_animal/notification.dart';
 import 'package:alkademi_widget/page_animal/person.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
