@@ -16,7 +16,9 @@ class Person extends StatelessWidget {
             children: [
               Text(
                 "Menu Person",
-                style: GoogleFonts.acme(),
+                style: GoogleFonts.acme().copyWith(
+                  fontSize: 50,
+                ),
               ),
             ],
           ),
