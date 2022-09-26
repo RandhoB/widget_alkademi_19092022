@@ -106,6 +106,9 @@ class _HomeState extends State<Home> {
                 DotsIndicator(
                   dotsCount: imgAssets.length,
                   position: _current.toDouble(),
+                  decorator: DotsDecorator(
+                    activeColor: Colors.red,
+                  ),
                 ),
               ],
             ),
@@ -187,7 +190,7 @@ class _HomeState extends State<Home> {
             ),
             Container(
               width: double.infinity,
-              height: 90,
+              height: 120,
               decoration: BoxDecoration(
                 color: Color(0xff363636),
                 borderRadius: BorderRadius.circular(10),
@@ -199,7 +202,8 @@ class _HomeState extends State<Home> {
                     child: Image.asset(
                       'assets/gunungku.jpg',
                       width: 132,
-                      height: 90,
+                      height: double.infinity,
+                      fit: BoxFit.cover,
                     ),
                   ),
                   SizedBox(
@@ -209,12 +213,13 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           'More animal species are\ngetting COVID-19 for the first\ntime',
                           style: TextStyle(
                             color: Color(0xffFFFFFF),
-                            fontSize: 10,
+                            fontSize: 11,
                           ),
                         ),
                         SizedBox(
@@ -223,8 +228,8 @@ class _HomeState extends State<Home> {
                         Row(
                           children: [
                             Container(
-                              width: 9,
-                              height: 6,
+                              width: 15,
+                              height: 12,
                               child: Image.asset('assets/simbol1.png'),
                             ),
                             SizedBox(
@@ -233,7 +238,7 @@ class _HomeState extends State<Home> {
                             Text(
                               'Read',
                               style: TextStyle(
-                                fontSize: 8,
+                                fontSize: 11,
                                 color: Color(0xffFFFFFF),
                               ),
                             ),
@@ -263,8 +268,8 @@ class recommended_Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.37,
-      height: 200,
+      width: MediaQuery.of(context).size.width * 0.4,
+      height: 250,
       decoration: BoxDecoration(
         color: Color(0xff363636),
         borderRadius: BorderRadius.circular(17),
@@ -274,35 +279,42 @@ class recommended_Widget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              'assets/gunungku.jpg',
-              width: double.infinity,
-              height: 130,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(24),
+              child: Image.asset(
+                'assets/gunungku.jpg',
+                width: double.infinity,
+                height: 120,
+                fit: BoxFit.cover,
+              ),
+            ),
+            SizedBox(
+              height: 15,
             ),
             Text(
               'The 12 most intriguing\nanimal discoveries of 2021',
               style: TextStyle(
-                fontSize: 8,
+                fontSize: 11,
                 color: Color(0xffFFFFFF),
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 50,
             ),
             Row(
               children: [
                 Container(
-                  width: 9,
-                  height: 6,
+                  width: 15,
+                  height: 12,
                   child: Image.asset('assets/simbol1.png'),
                 ),
                 SizedBox(
-                  width: 10,
+                  width: 15,
                 ),
                 Text(
                   'Read',
                   style: TextStyle(
-                    fontSize: 8,
+                    fontSize: 11,
                     color: Color(0xffFFFFFF),
                   ),
                 ),
