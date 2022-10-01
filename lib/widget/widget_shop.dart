@@ -15,7 +15,13 @@ class _quantityState extends State<quantity> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            setState(() {
+              if (_quantity > 1) {
+                _quantity = 1;
+              }
+            });
+          },
           icon: Icon(Icons.delete),
         ),
         IconButton(

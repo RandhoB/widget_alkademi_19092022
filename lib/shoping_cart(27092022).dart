@@ -57,7 +57,6 @@ class ShopingCart extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.green,
         leading: IconButton(
           onPressed: () {},
           icon: const Icon(Icons.arrow_back),

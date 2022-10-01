@@ -18,6 +18,10 @@ class latihanku extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+        // primaryColor: Colors.amber,
+      ),
       home: ShopingCart(),
     );
   }
